@@ -1,45 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace DependencyInversion;
 
-namespace DependencyInversion
+public class Employee
 {
-    public class Employee
+
+    public string EmployeeType { get; set; }
+    public double TotalHoursWorked { get; set; }
+
+    public ILogger logger;
+
+    public Employee(ILogger InputLogger)
+    {
+        logger = InputLogger;
+    }
+
+    public void Save(Employee emp)
     {
 
-        public string EmployeeType { get; set; }
-        public double TotalHoursWorked { get; set; }
-
-        public ILogger logger;
-
-        public Employee(ILogger InputLogger)
+        try
         {
-            logger = InputLogger;
+            //code for saving
+            throw new Exception("The method or operation is not implemented.");
         }
-
-        public void Save(Employee emp)
+        catch (Exception ex)
         {
-
-            try
+            
+            var isFileLog = true;
+            var isDBLog = false;
+            if (isFileLog)
             {
-                //code for saving
-                throw new Exception();
+                ILogger fileLogger = new FileLogger();
+                fileLogger.LogError(ex.Message);
             }
-            catch (Exception ex)
+            
+            if (isDBLog)
             {
+                ILogger logger = new DatabaseLogger();
                 logger.LogError(ex.Message);
-
             }
-
         }
-       
-    }
 
-    public enum empType
-    {
-        FullTime,
-        PartTime,
-        Contractor,
-        CLevel
     }
+       
 }
