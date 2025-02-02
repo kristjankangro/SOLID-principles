@@ -28,10 +28,3 @@ public class Employee
     }
        
 }
-
-public enum empType
-{
-    FullTime,
-    PartTime,
-    Contractor
-}
