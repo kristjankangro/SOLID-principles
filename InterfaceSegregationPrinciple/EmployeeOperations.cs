@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace InterfaceSegregation;
 
-namespace SOLIDPrinciple
+public class EmployeeOperations
 {
-    public class EmployeeOperations
-    {
-        public string ReportHours(Employee emp)
-        {
-            return "report";
-        }
-    }
+	public string ReportHours(Employee emp)
+	{
+		return "report";
+	}
 }

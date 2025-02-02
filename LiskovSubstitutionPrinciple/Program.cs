@@ -1,7 +1,6 @@
 ﻿using System;
-using lsp;
 
-namespace LSP
+namespace InterfaceSegregationPrinciple
 {
     class Program
     {
@@ -13,7 +12,7 @@ namespace LSP
             Employee empPTE = new Employee() { EmployeeType = empType.PartTime.ToString(), TotalHoursWorked = 10 };
             Employee empContractor = new Employee { EmployeeType = empType.Contractor.ToString(), TotalHoursWorked = 10 };
 
-            EmployeeFinances employeeFinances = new EmployeeFinancesForContractor();
+            IEmployeeFinances employeeFinances = new EmployeeFinancesForContractor();
             var totalPay = employeeFinances.CalculatePay(empContractor);
             var totalRewards = employeeFinances.CalculateRewards(empContractor);
             Console.WriteLine("totalPay {0}",totalPay);

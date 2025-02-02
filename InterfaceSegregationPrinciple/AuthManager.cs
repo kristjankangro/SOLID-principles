@@ -1,30 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SOLIDPrinciple
+namespace InterfaceSegregation;
+
+public class AuthManager
 {
-    public class AuthManager
+    public void Login()
     {
-        public void Login()
-        {
-            //Logging in the user
-        }
-        public void Logout()
-        {
-            //Logging out the user 
-        }
+        //Logging in the user
+    }
+    public void Logout()
+    {
+        //Logging out the user 
+    }
 
-        public Boolean IsCurrentUserAuthenticated()
-        {
-            //whether the current user is authenticated or not 
-            return true;
-        }
+    public Boolean IsCurrentUserAuthenticated()
+    {
+        //whether the current user is authenticated or not 
+        return true;
+    }
 
-        public Employee GetCurrentLoggedInUser()
-        {
-            //get the current logged in user details
-            return new Employee();
-        }
+    public Employee GetCurrentLoggedInUser()
+    {
+        //get the current logged in user details
+        return new Employee();
     }
 }

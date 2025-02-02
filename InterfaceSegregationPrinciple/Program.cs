@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SOLIDPrinciple
+namespace InterfaceSegregation
 {
     class Program
     {
