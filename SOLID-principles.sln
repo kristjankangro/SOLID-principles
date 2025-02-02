@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lsp", "lsp\lsp.csproj", "{6BBEB212-310D-487A-BC23-46F72B16B7AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitutionPrinciple", "LiskovSubstitutionPrinciple\LiskovSubstitutionPrinciple.csproj", "{6BBEB212-310D-487A-BC23-46F72B16B7AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isp", "InterfaceSegregationPrinciple\isp.csproj", "{EA734621-759F-45B4-BE09-6B2BBFB7549C}"
 EndProject

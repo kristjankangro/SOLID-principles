@@ -7,7 +7,7 @@ namespace LSP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("lsp");
+            Console.WriteLine("LiskovSubstitutionPrinciple");
 
             Employee empFTE = new Employee() { EmployeeType = empType.FullTime.ToString(), TotalHoursWorked = 10 };
             Employee empPTE = new Employee() { EmployeeType = empType.PartTime.ToString(), TotalHoursWorked = 10 };
